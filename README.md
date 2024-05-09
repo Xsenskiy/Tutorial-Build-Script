@@ -98,7 +98,29 @@ end
 
 
 
+function MENU()
+mn = gg.choice({
+"fast knife",
+},nil,"fast knife")
+if mn == 1 then fk() end
+function fk()
+gg.searchNumber("4510805389554273485", gg.TYPE_QWORD, false, gg.SIGN_EQUAL, 0, -1, 0)
+revert = gg.getResults(100, nil, nil, nil, nil, nil, nil, nil, nil)
+gg.editAll("4510805391705112576", gg.TYPE_QWORD)
+gg.processResume()
+gg.clearList()
+gg.toast("offset")
+end
 
+while true do
+if gg.isVisible(true)then
+MENUDM = 1
+gg.setVisible(false)
+end
+if MENUDM == 1 then
+MENU()
+end
+end
 
 Bye-Bye
 
